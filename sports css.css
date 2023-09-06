@@ -1,0 +1,102 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#wrapper{
+    height:100vh;  /*veiw code size*/
+    overflow-x: hidden;
+    overflow-y: auto;
+    perspective:10px;  /* distance between z plane  or distance between my eyes*/
+}
+
+.container{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    transform-style:preserve-3d ;
+    z-index: -1;
+}
+
+.background{
+    transform: translateZ(-40px) scale(5); /*translate saa image dur chali gayo choti nahi hui hai*/
+     
+}
+.foreground{
+    transform: translateZ(-20px) scale(3);
+}
+
+
+.background,.foreground{
+    position:absolute; /*dono image collide hogyi*/
+    height: 100%;
+    width: 100%;
+    z-index: -1;  /*heading upper lana ka liye*/
+     object-fit: cover; /* fit image in container*/
+    }
+     
+   h1{
+    position: absolute;
+    top: 5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 10rem;
+    letter-spacing: 4px;
+    color: aliceblue;
+    text-shadow: 0 0 10px rgba(0,0,0,3);
+   } 
+
+   section{
+    background-color: rgb(45,45,45);
+    color: white;
+    padding: 5rem 0;
+    
+   }
+   
+   .header{
+    font-size: 5rem;
+    padding: 0 10rem;
+
+   }
+   .text{
+    font-size:1.5rem ;
+    padding: 0 10rem;
+    margin: 5rem 0;
+   }
+
+   .bg{
+    position: relative;
+    width: 100%;
+    background-attachment: fixed; /*it will fix the img*/
+    height: 500px;
+    background-position: center;
+    background-size: cover;  /* is sara angle apni sahi jagah ayenge */
+}
+
+.desc{
+    position: absolute;
+    background-color: white;
+    padding: 0.5rem 2.5rem;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%) translate(-50%);
+    color: black;
+    font-size: 3.5rem;
+     font-weight: 500;
+
+}
+
+   .bg1{
+    background-image: url(sport-1.jpg);
+   }
+
+   .bg2{
+    background-image: url(sport-3.jpg);
+   }
+   .bg3{
+    background-image: url(sport-2.jpg);
+   }
+
